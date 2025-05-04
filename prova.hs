@@ -13,3 +13,17 @@ compactar_lista (x:xs) = (length (x : takeWhile (==x) xs), toUpper x) : compacta
 descompactar_lista :: [(Int, Char)] -> [Char]
 descompactar_lista [] = []
 descompactar_lista ((n, c):xs) = replicate n c ++ descompactar_lista xs
+
+-- Função principal
+-- Define uma lista original
+-- Mostra a versão original, compactada e descompactada
+main :: IO ()
+main = do
+    let original = "aaaaaggggtttaaacccccc"
+    putStrLn $ "Lista original: " ++ show original
+
+    let compactada = compactar_lista original
+    putStrLn $ "Lista compactada: " ++ show compactada
+
+    let descompactada = descompactar_lista compactada
+    putStrLn $ "Lista descompactada: " ++ show descompactada
