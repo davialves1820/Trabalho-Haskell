@@ -1,6 +1,6 @@
 # 📦 List Compressor in Haskell
 
-This project implements a **list compressor and decompressor** for consecutive characters using Haskell. The method used is **Run-Length Encoding (RLE)**, a simple and lossless compression technique.
+This project uses Haskell to implement a **list compressor and decompressor** for consecutive characters. The method used is **Run-Length Encoding (RLE)**, a simple and lossless compression technique.
 
 ---
 
@@ -99,8 +99,6 @@ This exercise is a great way to learn about:
 - [João Vitor](https://github.com/JoaoVitorSampaio)
 - [Ryan Caetano](https://github.com/xxxxxx)
 
-Course: Functional Programming in Haskell
-
 ---
 
 ## 🛠️ Future Suggestions
@@ -108,3 +106,11 @@ Course: Functional Programming in Haskell
 - Allow user input via the terminal
 - Extend to generic list compression (not just `Char`)
 - Add tests using `QuickCheck`
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+Course: Functional Programming in Haskell
