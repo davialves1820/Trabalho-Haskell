@@ -8,7 +8,8 @@ compactar_lista [] = []
 compactar_lista (x:xs) = (length (x : takeWhile (==x) xs), toUpper x) : compactar_lista (dropWhile (==x) xs)
 
 -- Função para descompactar a lista
--- Reconstrói a lista original a partir da versão compactada.
+-- Reconstrói a lista original a partir da versão compactada
+-- Cria uma lista com n repetições do caractere c e concatena com o resultado da descompactação do restante da lista
 descompactar_lista :: [(Int, Char)] -> [Char]
 descompactar_lista [] = []
 descompactar_lista ((n, c):xs) = replicate n c ++ descompactar_lista xs
