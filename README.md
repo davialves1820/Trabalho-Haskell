@@ -97,7 +97,7 @@ This exercise is a great way to learn about:
 - [Davi Alves](https://github.com/davialves1820)
 - [Gabriel Ribeiro](https://github.com/gabrielbribeiroo)
 - [João Vitor](https://github.com/JoaoVitorSampaio)
-- [Ryan Caetano](https://github.com/xxxxxx)
+- [Ryan Caetano](https://github.com/)
 
 ---
 
