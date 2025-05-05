@@ -94,10 +94,20 @@ This exercise is a great way to learn about:
 
 ## 📌 Authors
 
-- [![Davi Alves](https://github.com/davialves1820.png?size=100)](https://github.com/davialves1820)
-- [![Gabriel Ribeiro](https://github.com/gabrielbribeiroo.png?size=100)](https://github.com/gabrielbribeiroo)
-- [![João Vitor](https://github.com/JoaoVitorSampaio.png?size=100)](https://github.com/JoaoVitorSampaio)
-- [![Ryan Caetano](https://github.com/Ryan1804.png?size=100)](https://github.com/Ryan1804)
+<div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+  <a href="https://github.com/davialves1820" target="_blank">
+    <img src="https://github.com/davialves1820.png" width="100" style="border-radius: 50%;" alt="Davi Alves"/>
+  </a>
+  <a href="https://github.com/gabrielbribeiroo" target="_blank">
+    <img src="https://github.com/gabrielbribeiroo.png" width="100" style="border-radius: 50%;" alt="Gabriel Ribeiro"/>
+  </a>      
+  <a href="https://github.com/JoaoVitorSampaio" target="_blank">
+    <img src="https://github.com/JoaoVitorSampaio.png" width="100" style="border-radius: 50%;" alt="Joao Vitor"/>
+  </a>
+  <a href="https://github.com/Ryan1804" target="_blank">
+    <img src="https://github.com/Ryan1804.png" width="100" style="border-radius: 50%;" alt="Ryan Caetano"/>
+  </a>
+</div>
 
 ---
 
