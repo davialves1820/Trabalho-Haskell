@@ -94,10 +94,10 @@ This exercise is a great way to learn about:
 
 ## 📌 Authors
 
-- [Davi Alves](https://github.com/davialves1820)
-- [Gabriel Ribeiro](https://github.com/gabrielbribeiroo)
-- [João Vitor](https://github.com/JoaoVitorSampaio)
-- [Ryan Caetano](https://github.com/Ryan1804)
+- [![Davi Alves](https://github.com/davialves1820.png?size=100)](https://github.com/davialves1820)
+- [![Gabriel Ribeiro](https://github.com/gabrielbribeiroo.png?size=100)](https://github.com/gabrielbribeiroo)
+- [![João Vitor](https://github.com/JoaoVitorSampaio.png?size=100)](https://github.com/JoaoVitorSampaio)
+- [![Ryan Caetano](https://github.com/Ryan1804.png?size=100)](https://github.com/Ryan1804)
 
 ---
 
