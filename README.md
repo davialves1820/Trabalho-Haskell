@@ -1,3 +1,4 @@
+
 # 📦 List Compressor in Haskell
 
 This project uses Haskell to implement a **list compressor and decompressor** for consecutive characters. The method used is **Run-Length Encoding (RLE)**, a simple and lossless compression technique.
@@ -9,12 +10,13 @@ This project uses Haskell to implement a **list compressor and decompressor** fo
 - **Compression**: transforms a list like `['a','a','a','b','b','c']` into `[(3,'A'), (2,'B'), (1,'C')]`, grouping consecutive repetitions.
 - **Decompression**: rebuilds the original list from the compressed format.
 - All characters are converted to **uppercase** during compression for standardization.
+- Supports **interactive user input**.
 
 ---
 
 ## 📁 Code Structure
 
-### compactar_lista
+### `compactar_lista`
 
 ```haskell
 compactar_lista :: [Char] -> [(Int, Char)]
@@ -23,7 +25,7 @@ compactar_lista (x:xs) =
     (length (x : takeWhile (==x) xs), toUpper x) : compactar_lista (dropWhile (==x) xs)
 ```
 
-### descompactar_lista
+### `descompactar_lista`
 
 ```haskell
 descompactar_lista :: [(Int, Char)] -> [Char]
@@ -31,19 +33,42 @@ descompactar_lista [] = []
 descompactar_lista ((n, c):xs) = replicate n c ++ descompactar_lista xs
 ```
 
-### main
+### `main`
 
 ```haskell
+import Data.Char (toUpper)
+import System.IO
+
+compactar_lista :: [Char] -> [(Int, Char)] 
+compactar_lista [] = []
+compactar_lista (x:xs) = (length (x : takeWhile (==x) xs), toUpper x) : compactar_lista (dropWhile (==x) xs)
+
+descompactar_lista :: [(Int, Char)] -> [Char]
+descompactar_lista [] = []
+descompactar_lista ((n, c):xs) = replicate n c ++ descompactar_lista xs
+
+leitura :: IO String
+leitura = do 
+    x <- getChar
+    if x == '\n' then
+       return []
+    else do 
+        xs <- leitura
+        return (x:xs)
+
 main :: IO ()
-main = do
-    let originalList = "aaaaaggggtttaaacccccc"
-    putStrLn $ "Original list: " ++ show originalList
+main = do 
+    putStr "Enter a string: "
+    xs <- leitura
 
-    let compressed = compactar_lista originalList
-    putStrLn $ "Compressed list: " ++ show compressed
+    let original = xs
+    putStrLn ("Original list: " ++ show original)
 
-    let decompressed = descompactar_lista compressed
-    putStrLn $ "Decompressed list: " ++ show decompressed
+    let compactada = compactar_lista original
+    putStrLn $ "Compressed list: " ++ show compactada
+
+    let descompactada = descompactar_lista compactada
+    putStrLn $ "Decompressed list: " ++ show descompactada
 ```
 
 ---
@@ -75,9 +100,10 @@ runghc Compressor.hs
 ## 📝 Sample Output
 
 ```
-Original list: "aaaaaggggtttaaacccccc"
-Compressed list: [(5,'A'),(4,'G'),(3,'T'),(3,'A'),(6,'C')]
-Decompressed list: "AAAAAGGGGTTTAAACCCCCC"
+Enter a string: aaaabbbcccc
+Original list: "aaaabbbcccc"
+Compressed list: [(4,'A'),(3,'B'),(4,'C')]
+Decompressed list: "AAAABBBCCCC"
 ```
 
 ---
@@ -94,7 +120,7 @@ This exercise is a great way to learn about:
 
 ## 📌 Authors
 
-<div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+<div align="center" style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
   <a href="https://github.com/davialves1820" target="_blank">
     <img src="https://github.com/davialves1820.png" width="100" style="border-radius: 50%;" alt="Davi Alves"/>
   </a>
